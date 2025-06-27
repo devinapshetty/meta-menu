@@ -1,0 +1,76 @@
+body {
+  background: #181a1b;
+  color: #e4e6eb;
+  font-family: 'Segoe UI', 'Roboto', 'Inter', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.login-container {
+  background: #23272a;
+  padding: 40px 32px 32px 32px;
+  border-radius: 14px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #339cff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #e4e6eb;
+}
+
+input[type="text"], input[type="tel"] {
+  background: #181a1b;
+  color: #e4e6eb;
+  border: 1.5px solid #339cff;
+  border-radius: 7px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px #339cff33;
+}
+
+.login-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: #339cff;
+} 

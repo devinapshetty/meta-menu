@@ -97,9 +97,19 @@ app.get('/api/bill/:customerId', async (req, res) => {
   }
 });
 
-// Serve frontend
+// Serve login page
+app.get(['/', '/login'], (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/login.html'));
+});
+
+// Serve menu page
+app.get('/menu', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/menu.html'));
+});
+
+// Fallback: serve login.html for any other route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/login.html'));
 });
 
 // Start server

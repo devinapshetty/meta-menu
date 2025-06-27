@@ -1,0 +1,310 @@
+:root {
+  /* Color variables */
+  --bg-dark: #181a1b;
+  --card-bg: #23272a;
+  --border-dark: #2c2f33;
+  --text-primary: #e4e6eb;
+  --text-secondary: #b0b3b8;
+  --accent-blue: #339cff;
+  --primary-btn: #2563eb;
+  --success-btn: #22d3ee;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', 'Roboto', 'Inter', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Layout container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--accent-blue);
+  margin: 0 0 1.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+
+/* Card & Menu Items Grid */
+#menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.card,
+.menu-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover,
+.menu-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Menu Item Components */
+.menu-header {
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.menu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.menu-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.menu-base {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.menu-order-count {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  font-weight: 500;
+  border-radius: 7px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary-btn);
+  color: white;
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.1);
+}
+
+.btn-success {
+  background: var(--success-btn);
+  color: var(--bg-dark);
+  box-shadow: 0 1px 4px rgba(34, 211, 238, 0.1);
+}
+
+.menu-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.menu-btn-row .order-btn {
+  min-width: 120px;
+  font-size: 1rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+/* Table Styles */
+.table,
+.table th,
+.table td {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-dark) !important;
+}
+
+#order-total {
+  font-weight: 700;
+  color: var(--accent-blue) !important;
+  font-size: 1.1rem;
+}
+
+/* Order Section Styles */
+#order-section {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.order-container {
+  background: var(--card-bg);
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.order-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin: 0;
+}
+
+#order-total {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-blue) !important;
+}
+
+.order-items {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+#order-section .table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #23272a;
+  color: #e4e6eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#order-section th, #order-section td {
+  padding: 12px 16px;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+#order-section th:first-child,
+#order-section td:first-child {
+  text-align: left;
+}
+
+#order-section th:last-child,
+#order-section td:last-child {
+  text-align: right;
+}
+
+#order-section th {
+  text-align: left;
+  font-weight: 600;
+  background: #23272a;
+  border-bottom: 2px solid #2c2f33;
+}
+
+#order-section td {
+  text-align: right;
+  border-bottom: 1px solid #2c2f33;
+}
+
+#order-section tfoot th, #order-section tfoot td {
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #202225;
+  color: #339cff;
+  border-top: 2px solid #339cff;
+  border-bottom: none;
+}
+
+.order-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.order-btn {
+  padding: 0.875rem 1.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Adjust menu grid to balance with order section */
+#menu-items {
+  margin-bottom: 3rem;
+}
+
+/* Make cards slightly smaller to emphasize order section */
+.card, .menu-item {
+  padding: 1.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 700px) {
+  #menu-items {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+#bill-section.card {
+  max-width: 400px;
+  width: 100%;
+  margin: 40px auto 0 auto;
+  padding: 32px 24px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#bill-section h2,
+#bill-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+#bill-total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #339cff;
+  margin-bottom: 20px;
+}
